@@ -1,0 +1,137 @@
+[class*="__container"] {
+    max-width: 1210px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+.header {
+    background-color: #FFFFFF;
+}
+
+.header__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 72px;
+}
+
+.header__container img {
+    max-width: 100%;
+}
+
+.main {
+    flex: 1 1 100%;
+    background-color: #F2F2F2;
+}
+
+.main__container {
+    background-color: #F2F2F2;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 100px 48px 100px;
+}
+
+.calculator__title {
+    padding-bottom: 28px;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.separator {
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin-bottom: 48px;
+    background-color: #27AE60;
+    border-radius: 32px;
+}
+
+.calculator__indicators {
+    display: flex;
+    margin-bottom: 16px;
+    gap: 16px;
+}
+
+.indicators {
+    display: flex;
+    align-items: center;
+    padding: 15px 23px;
+    width: 316px;
+    height: 56px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+}
+
+.indicators__text {
+    padding-left: 21px;
+    color: #828282;
+}
+
+.indicators__text span {
+    font-weight: 700;
+    font-size: 18px;
+    color: #333333;
+}
+
+.parameters {
+    display: flex;
+    text-align: start;
+}
+
+.goal__parameters {
+    display: flex;
+    flex: 1 1 50%;
+    padding: 16px 24px;
+    background: #FFFFFF;
+    border-radius: 16px
+}
+
+.parameters__title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.parameter__chart {
+    padding: 16px 0px;
+}
+
+.parameter__text {
+    font-size: 14px;
+}
+
+.bmi__parameters {
+    display: flex;
+    flex: 1 1 50%;
+}
+
+.parameters__bmi {
+    padding: 16px 24px;
+    background: #FFFFFF;
+    border-radius: 16px
+}
+
+.footer {
+    background-color: #333333;
+    padding: 40px 0px;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__text {
+    font-size: 14px;
+    color: #828282;
+}
