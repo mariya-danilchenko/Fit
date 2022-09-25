@@ -35,93 +35,35 @@
                     <h2 class="test__title"></h2>
                     <span class="separator"></span>
                     <p class="test__text">Take the test to create a personal plan. It won't take more than a minute</p>
-                    <!--<ul class="test__answer test__answer_radio">
+                    <ul class="test__answer test__answer_radio" hidden>
                         <li class="test__answer__item">
                             <input type="radio" id="q1" name="radio-input">
                             <img src="">
                             <label for="q1"><p class="test-answer__label"></p></label>
                         </li>
-                    </ul>-->
-
-                    <!--<fotm class="test__parameters parameters">
-                        <label class="parameters__name" for="q3">Weight (kg)</label>
-                        <input class="parameters__input" id="q3" type="text" placeholder="Enter weight ">
-                        
-                        <label class="parameters__name" for="q3">Growth (cm)</label>
-                        <input class="parameters__input" id="q3" type="text" placeholder="Enter growth">
-                        
-                        <label class="parameters__name" for="q3">Years</label>
-                        <input class="parameters__input" id="q3" type="text" placeholder="Enter years">
-                    </fotm>
-                    <a href="" class="test__button button">Next</a>-->
-
-                    <!--<fotm class="test__parameters parameters">
-                        <label class="parameters__name" for="q4">Weight (kg)</label>
-                        <input class="parameters__input" id="q4" type="text" placeholder="Enter weight ">
-                    </fotm>
-                    <a href="" class="test__button button">Next</a>-->
-
-                    <!--<ul class="test__answer test__answer_checkbox">
-                        <li class="test__answer__item">
-                            <input type="checkbox" id="q5" name="checkbox-input">
-                            <img src="../img/q1/not.png">
-                            <label for="q5"><p class="test-answer__label">Not</p></label>
-                        </li>
-
-                        <li class="test__answer__item">
-                            <input type="checkbox" id="q5" name="checkbox-input">
-                            <img src="../img/q1/junk_food.png">
-                            <label for="q5"><p class="test-answer__label">I eat a lot of junk food</p></label>
-                        </li>
-
-                        <li class="test__answer__item">
-                            <input type="checkbox" id="q5" name="checkbox-input">
-                            <img src="../img/q1/smoking.png">
-                            <label for="q5"><p class="test-answer__label">Smoking</p></label>
-                        </li>
-
-                        <li class="test__answer__item">
-                            <input type="checkbox" id="q5" name="checkbox-input">
-                            <img src="../img/q1/alcohol.png">
-                            <label for="q5"><p class="test-answer__label">Alcohol</p></label>
-                        </li>
-
-                        <li class="test__answer__item">
-                            <input type="checkbox" id="q5" name="checkbox-input">
-                            <img src="../img/q1/sweets.png">
-                            <label for="q5"><p class="test-answer__label">I eat a lot of sweets</p></label>
-                        </li>
                     </ul>
-                    <a href="" class="test__button button">Next</a>-->
 
-                    <!--<ul class="test__answer test__answer_radio">
-                        <li class="test__answer__item">
-                            <input type="radio" id="q6" name="radio-input">
-                            <img src="../img/q1/5_hours.png">
-                            <label for="q6"><p class="test-answer__label">Less then 5 hours</p></label>
-                        </li>
+                    <form class="test__answer_input" hidden>
+                        <div class="test__parameters parameters">
+                            <div class="test__answer__item_input">
+                                <label class="parameters__name" for="q3">Weight (kg)</label>
+                                <input class="parameters__input" id="q3" type="text" placeholder="Enter weight ">
+                            </div>
+                        </div>
+                        <a href="#" class="test__button button">Next</a>
+                    </form>
 
-                        <li class="test__answer__item">
-                            <input type="radio" id="q6" name="radio-input">
-                            <img src="../img/q1/5-7_hours.png">
-                            <label for="q6"><p class="test-answer__label">5-7 hours</p></label>
-                        </li>
-
-                        <li class="test__answer__item">
-                            <input type="radio" id="q6" name="radio-input">
-                            <img src="../img/q1/8-9_hours.png">
-                            <label for="q6"><p class="test-answer__label">8-9 hours</p></label>
-                        </li>
-
-                        <li class="test__answer__item">
-                            <input type="radio" id="q6" name="radio-input">
-                            <img src="../img/q1/9_hours.png">
-                            <label for="q6"><p class="test-answer__label">More than 9 hours</p></label>
-                        </li>
-                    </ul>
-                    <p class="test__text__down">Click on the block to select an options</p>-->
-
-                    <div class="bar">
+                    <div class="checkBox-container" hidden>
+                        <ul class="test__answer test__answer_checkbox">
+                            <li class="test__answer__item">
+                                <input type="checkbox" id="q1" class="checkbox-input">
+                                <img src="../img/q1/not.png">
+                                <label for="q1"><p class="test-answer__label">Not</p></label>
+                            </li>
+                        </ul>
+                        <a href="#" class="test__button button">Next</a>
+                    </div>
+                    <div class="bar" hidden>
                         <div class="innerbar" data-parcent="100"></div>
                     </div>
                 </div>

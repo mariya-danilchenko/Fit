@@ -1,0 +1,96 @@
+[class*="__container"] {
+    max-width: 1210px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+.header {
+    background-color: #FFFFFF;
+}
+
+.header__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 72px;
+}
+
+.header__container img {
+    max-width: 100%;
+}
+
+.main {
+    flex: 1 1 100%;
+    background-color: #F2F2F2;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__block {
+    display: flex;
+    align-items: center;
+    padding: 60px 0 48px 0;
+}
+
+.menu__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    background: #FFFFFF;
+    border-radius: 50%;
+}
+
+.menu__title {
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.content__menu {
+    display: flex;
+}
+
+.content__menu__recipe {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+}
+
+.menu__name {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #828282;
+}
+
+.menu__name span {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: #EB5757;
+}
+
+.menu__text {
+    padding-right: 30px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.menu__img {
+    display: flex;
+    flex: 1 1 50%;
+    margin-left: 20px;
+}
+
+.menu__img img {
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+}

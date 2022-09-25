@@ -21,11 +21,12 @@
 
 .main {
     flex: 1 1 100%;
-    background-color: #F2F2F2;
+    background: linear-gradient(#F2F2F2 61%, #FFFFFF 39%);
 }
 
 .main__container {
-    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
 }
 
 .calculator {
@@ -33,7 +34,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: 60px 100px 48px 100px;
 }
 
@@ -73,7 +73,8 @@
     color: #828282;
 }
 
-.indicators__text span {
+.indicators__text span,
+.parameter__text span {
     font-weight: 700;
     font-size: 18px;
     color: #333333;
@@ -82,11 +83,13 @@
 .parameters {
     display: flex;
     text-align: start;
+    column-gap: 16px;
 }
 
 .goal__parameters {
     display: flex;
-    flex: 1 1 50%;
+    flex-direction: column;
+    flex: 1 1 41.5%;
     padding: 16px 24px;
     background: #FFFFFF;
     border-radius: 16px
@@ -101,19 +104,188 @@
     padding: 16px 0px;
 }
 
-.parameter__text {
-    font-size: 14px;
-}
-
-.bmi__parameters {
+.personal__parameters {
     display: flex;
-    flex: 1 1 50%;
+    flex-direction: column;
 }
 
 .parameters__bmi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 41.5%;
     padding: 16px 24px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+}
+
+.index__bmi {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.value__bmi {
+    margin-left: 8px;
+    padding: 4px 24px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    border-radius: 24px;
+}
+
+.value__bmi-red {
+    background-color: #EB5757;
+}
+
+.value__bmi-orange {
+    background-color: #ee7e22;
+}
+
+.value__bmi-yellow {
+    background-color: #e2ea49;
+}
+
+.value__bmi-green {
+    background-color: #27AE60;
+}
+
+.weight__indicator {
+    border-radius: 20px;
+    background: linear-gradient(90deg, #EB5757 0%, #F2C94C 25%, #27AE60 48.96%, #F2C94C 74.48%, #EB5757 100%);
+    width: 434px;
+    height: 8px;
+}
+
+.indicator {
+    width: 8px;
+    height: 24px;
+    border-radius: 16px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     background: #FFFFFF;
-    border-radius: 16px
+    border: 1px solid #E0E0E0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.parameters__calorie {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    padding: 18px 24px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+}
+
+.parameters__calorie img {
+    margin-right: 18px;
+}
+
+.your__plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.your__plan__title {
+    padding-bottom: 28px;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+button {
+    border: none;
+    background-color: #FFFFFF;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    padding: 12px 48px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    margin-bottom: 24px;
+}
+
+.content .content__day:not(:first-child) {
+    display: none;
+}
+
+.active {
+    color: #27AE60;
+}
+
+.active::after {
+    content: "";
+    display: block;
+    padding-top: 3px;
+    border-bottom: 2px solid #27AE60;
+    width: 12px;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    padding-bottom: 76px;
+}
+
+.content__day {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__day__title {
+    padding: 32px 0px 24px 0px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.workout__plan,
+.nutrition__plan {
+    display: flex;
+    column-gap: 18px;
+}
+
+.plan {
+    display: flex;
+    flex: 1 1 30%;
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+}
+
+.plan img {
+    border-radius: 10px;
+}
+
+.plan__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 18px;
+}
+
+.plan__content__button {
+    font-weight: 500;
+    color: #27AE60;
+}
+
+.plan__content__button:hover {
+    color: #219653;
+}
+
+.plan__content__button svg {
+    margin-left: 12px;
+    vertical-align: middle;
+}
+
+.plan__content__button:hover path {
+    fill: #219653;
 }
 
 .footer {

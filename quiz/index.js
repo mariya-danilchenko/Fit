@@ -39,17 +39,15 @@ const QUESTIONS = [{
                 answer_title: 'Years',
                 value: "Enter years",
             }
-        ],
-        button: 'a',
+        ]
     },
     {
-        title: 'How much do you want to weigh?',
+        title: 'How much do you want to weight?',
         type: 'input',
         answers: [{
             answer_title: 'Weight (kg)',
             value: "Enter weight",
-        }],
-        button: 'a',
+        }]
     },
     {
         title: 'Bad habits',
@@ -74,8 +72,7 @@ const QUESTIONS = [{
                 image: '../img/q1/sweets.png',
                 answer_title: 'I eat a lot of sweets',
             }
-        ],
-        button: 'a',
+        ]
     },
     {
         title: 'How many hours do you sleep?',
@@ -97,67 +94,170 @@ const QUESTIONS = [{
                 answer_title: 'More than 9 hours',
             }
         ]
-    },
+    }
 
 ];
+
+const radioClickCallback = (e) => {
+    const answerContainerElem = document.querySelector('.test__answer_radio');
+    e.preventDefault();
+    localStorage.setItem(questionNumber, e.target.parentNode.querySelector('p').innerText);
+    questionNumber++;
+    const answerItems = answerContainerElem.querySelectorAll('.test__answer__item');
+    answerItems.forEach((item, index) => {
+        item.removeEventListener('click', radioClickCallback);
+        if (index) {
+            item.remove();
+        }
+    })
+    answerContainerElem.hidden = true;
+    setQuestion();
+};
 
 let questionNumber = 0;
 setQuestion();
 
 function setQuestion() {
+    if (questionNumber === QUESTIONS.length) {
+        document.querySelector('.container-progress').remove();
+        document.querySelector('.test__title').innerText = 'Analyzing...';
+
+        const littleText = document.querySelector('.test__text');
+        littleText.innerHTML = 'We analyze the data and create a program for you';
+        littleText.hidden = false;
+
+        document.querySelector('.bar').hidden = false;
+        startAnalyzing();
+        return;
+    }
+
     addProgress();
     if (questionNumber === 1) {
-        document.querySelector('.test__text').remove();
+        document.querySelector('.test__text').hidden = true;
     }
-    console.log('Function exec')
     let questionObject = QUESTIONS[questionNumber];
     if (!questionObject) return;
 
     const qustionTitle = document.querySelector('.test__title');
-    console.log(questionObject)
-    console.log(questionNumber)
     qustionTitle.innerText = questionObject.title;
-    // let firstRadioListener;
     questionObject.answers.forEach((answerObject, index) => {
-        if (questionObject.type === "radio") {
+        if (questionObject.type === "input") {
+            const answerContainerElem = document.querySelector('.test__answer_input')
+            const answerContainer = answerContainerElem.querySelector('.test__parameters');
+            answerContainerElem.hidden = false
+            let answerElem = answerContainer.querySelector('.test__answer__item_input');
+
+            if (index) {
+                answerElem = answerElem.cloneNode(true);
+                answerContainer.appendChild(answerElem);
+            }
+
+            const input = answerElem.querySelector('input');
+            input.setAttribute('id', 'input' + index);
+            input.placeholder = answerObject.value;
+            const label = answerElem.querySelector('label');
+            label.setAttribute('for', 'input' + index);
+            label.innerText = answerObject.answer_title;
+
+            const button = answerContainerElem.querySelector('.test__button');
+            const clickCallback = (e) => {
+                e.preventDefault();
+                const form = document.querySelector('.test__answer_input');
+                let results = {};
+                [...form.querySelectorAll('.test__answer__item_input')].forEach(input => {
+                    const key = input.querySelector('.parameters__name').innerHTML;
+                    const value = input.querySelector('.parameters__input').value;
+                    results[key] = value;
+                });
+                localStorage.setItem(questionNumber, JSON.stringify(results));
+                questionNumber++;
+
+                const answerItems = form.querySelectorAll('.test__answer__item_input');
+                answerItems.forEach((item, index) => {
+                    if (index) {
+                        item.remove();
+                    } else {
+
+                        item.querySelector('.parameters__input').value = '';
+                    }
+                })
+                answerContainerElem.hidden = true;
+                button.removeEventListener('click', clickCallback);
+                setQuestion();
+            };
+            if (!index) {
+                button.addEventListener('click', clickCallback);
+            }
+        } else if (questionObject.type === "radio") {
 
             const answerContainerElem = document.querySelector('.test__answer_radio');
+            answerContainerElem.hidden = false;
             let answerElem = answerContainerElem.querySelector('.test__answer__item');
 
             if (index) {
                 answerElem = answerElem.cloneNode(true);
                 answerContainerElem.appendChild(answerElem);
-            } else {
-
             }
 
             const input = answerElem.querySelector('input');
-            input.setAttribute('id', index);
+            input.setAttribute('id', 'radio' + index);
             const img = answerElem.querySelector('img');
             img.setAttribute('src', answerObject.image);
             const label = answerElem.querySelector('label');
-            label.setAttribute('for', index);
+            label.setAttribute('for', 'radio' + index);
             const labelText = answerElem.querySelector('p');
             labelText.innerText = answerObject.answer_title;
 
-            answerElem.addEventListener('click', (e) => {
-                console.log(e)
+            answerElem.addEventListener('click', radioClickCallback);
+        } else if (questionObject.type === "checkbox") {
+            const checkBoxContainer = document.querySelector('.checkBox-container');
+            checkBoxContainer.hidden = false;
+            const answerContainerElem = checkBoxContainer.querySelector('.test__answer_checkbox');
+            let answerElem = answerContainerElem.querySelector('.test__answer__item');
+
+            if (index) {
+                answerElem = answerElem.cloneNode(true);
+                answerContainerElem.appendChild(answerElem);
+            }
+
+            const input = answerElem.querySelector('input');
+            input.setAttribute('id', 'checkbox' + index);
+            const img = answerElem.querySelector('img');
+            img.setAttribute('src', answerObject.image);
+            const label = answerElem.querySelector('label');
+            label.setAttribute('for', 'checkbox' + index);
+            const labelText = answerElem.querySelector('p');
+            labelText.innerText = answerObject.answer_title;
+
+
+            const button = checkBoxContainer.querySelector('.test__button');
+            const clickCallback = (e) => {
                 e.preventDefault();
-                // answerContainerElem.querySelector('.test__answer__item').removeEventListener('click', firstRadioListener);
-                console.log(e.target)
-                localStorage.setItem(questionNumber, e.target.querySelector('p').innerText);
+                const checkBoxesContainer = document.querySelector('.test__answer_checkbox');
+                let results = [];
+                const allCheckBoxes = [...checkBoxesContainer.querySelectorAll('.checkbox-input')];
+                allCheckBoxes.forEach(checkbox => checkbox.checked ? results.push(checkbox.labels[0].innerText) : undefined);
+                const validationError = results.includes('Not') && results.length > 1 ? `You can't chose "Not" option with other options` : '';
+                if (validationError) {
+                    alert(validationError);
+                    return;
+                }
+                localStorage.setItem(questionNumber, JSON.stringify(results));
                 questionNumber++;
-                const answerItems = answerContainerElem.querySelectorAll('.test__answer__item');
+
+                const answerItems = checkBoxesContainer.querySelectorAll('.test__answer__item');
                 answerItems.forEach((item, index) => {
                     if (index) {
                         item.remove();
                     }
                 })
+                checkBoxContainer.hidden = true;
+                button.removeEventListener('click', clickCallback);
                 setQuestion();
-            });
-            // if (!index) {
-            //     firstRadioListener = listener;
-            // }
+            };
+            if (!index) {
+                button.addEventListener('click', clickCallback);
+            }
         }
     });
 }
@@ -184,23 +284,34 @@ function addProgress() {
     }
 }
 
+let count = 0;
+let interval;
 
 function progress() {
     const innerbar = document.querySelector('.innerbar')
-    let count = 0;
-    count++
+    count++;
     innerbar.style.width = `${count}%`
     if (count == innerbar.dataset.parcent) {
-        clearInterval(stop)
+        window.open(`${window.location.origin}/calculation/calculation.html`, "_self");
+        clearInterval(interval);
     }
 }
 
-let stop = setInterval(function() {
-    progress()
-}, [100])
+function startAnalyzing() {
+    interval = setInterval(function() {
+        progress()
+    }, [80])
+}
 
+// function onCircleClick(e) {
+//     const circleNumber = Number(e.target.innerHTML);
+//     if (circleNumber - 1 >= questionNumber) {
+//         return;
+//     }
 
+//     questionNumber = circleNumber - 1;
+//     setQuestion();
+// }
 
-
-
-const results = ['']
+// const circles = document.querySelectorAll('.circle');
+// [...circles].forEach(circle => circle.addEventListener('click', onCircleClick));

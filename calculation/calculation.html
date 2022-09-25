@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Prompt:300,regular,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/calculation.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <img src="../img/header/Logo.svg" class="header__logo" alt="logo">
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main__container">
+                <section class="calculator">
+                    <h2 class="calculator__title">Calculation of indicators</h2>
+                    <span class="separator"></span>
+                    <div class="calculator__indicators">
+                        <div class="indicators">
+                            <img src="../img/q1/height.svg" alt="height">
+                            <p class="indicators__text">Height: <span>182cm</span></p>
+                        </div>
+
+                        <div class="indicators">
+                            <img src="../img/q1/weight.svg" alt="weight">
+                            <p class="indicators__text">Weight: <span>72kg</span></p>
+                        </div>
+
+                        <div class="indicators">
+                            <img src="../img/q1/age.svg" alt="age">
+                            <p class="indicators__text">Age: <span>23</span></p>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <div class="goal__parameters">
+                            <h2 class="parameters__title">Goal</h2>
+                            <div class="parameter__chart">
+                                <img src="../img/q1/chart.png" alt="">
+                            </div>
+                            <p class="parameter__text">Stick to your plan every day and you will achieve a result of <span>64 kg </span>in <span>32 days</span></p>
+                        </div>
+
+                        <div class="personal__parameters">
+                            <div class="parameters__bmi">
+                                <h2 class="parameters__title">BMI</h2>
+                                <p class="index__bmi"><span class="value__bmi"></span></p>
+                                <div class="weight__indicator">
+                                    <div class="indicator"></div>
+                                </div>
+                                <p class="parameter__text">This is the body mass index, which shows the ratio of your height and weight.</p>
+                            </div>
+
+                            <div class="parameters__calorie">
+                                <img src="../img/q1/ChartBar.svg" alt="chartBar">
+                                <p class="parameter__text">Your daily calorie intake <span> 2450 kcal</span></p>
+                            </div>
+                        </div>
+
+                </section>
+
+                <section class="your__plan">
+                    <h2 class="your__plan__title">Your individual plan</h2>
+                    <span class="separator"></span>
+                    <div class="slider">
+                        <button class="active day" onClick="show(1)">Mon</button>
+                        <button class="day" onClick="show(2)">Tue</button>
+                        <button class="day" onClick="show(3)">Wed</button>
+                        <button class="day" onClick="show(4)">Thu</button>
+                        <button class="day" onClick="show(5)">Fri</button>
+                        <button class="day" onClick="show(6)">Sat</button>
+                        <button class="day" onClick="show(7)">Sun</button>
+                    </div>
+
+                    <div class="content">
+
+                        <div class="content__day">
+                            <h2 class="content__day__title">Workout</h2>
+                            <div class="workout__plan">
+                                <div class="plan">
+                                    <img src="../img/Exercise/1s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__text">Exercise for the press</p>
+                                        <a href="" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/Exercise/2s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__content__text">Exercise for the lower back</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/Exercise/3s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__text">Fat burning exercise</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="content__day__title">Nutrition</h2>
+                            <div class="nutrition__plan">
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/apple_pancakes.png" alt="apple_pancakes">
+                                    <div class="plan__content">
+                                        <p>Vegetable Salad</p>
+                                        <a href="menu.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/Pumpkin_soup.png" alt="Pumpkin_soup">
+                                    <div class="plan__content">
+                                        <p>Baked chicken</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/Stuffed_champignons.png" alt="Stuffed_champignons">
+                                    <div class="plan__content">
+                                        <p>Grilled red fish</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content__day">
+                            <h2 class="content__day__title">Workout</h2>
+                            <div class="workout__plan">
+                                <div class="plan">
+                                    <img src="../img/Exercise/4s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__text">Exercise for the press</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/Exercise/5s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__content__text">Exercise for the lower back</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/Exercise/6s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__text">Fat burning exercise</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="content__day__title">Nutrition</h2>
+                            <div class="nutrition__plan">
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/eggs_with_salad.png" alt="eggs_with_salad">
+                                    <div class="plan__content">
+                                        <p>Vegetable Salad</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/Pasta_with_tuna.png" alt="Pasta_with_tuna">
+                                    <div class="plan__content">
+                                        <p>Baked chicken</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/Pizza.png" alt="Pizza">
+                                    <div class="plan__content">
+                                        <p>Grilled red fish</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__day">
+                            <h2 class="content__day__title">Workout</h2>
+                            <div class="workout__plan">
+                                <div class="plan">
+                                    <img src="../img/Exercise/7s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__text">Exercise for the press</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/Exercise/8s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__content__text">Exercise for the lower back</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/Exercise/9s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__text">Fat burning exercise</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="content__day__title">Nutrition</h2>
+                            <div class="nutrition__plan">
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/lazy_dumplings.png" alt="lazy_dumplings">
+                                    <div class="plan__content">
+                                        <p>Vegetable Salad</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/Chicken_with_rice.png" alt="Chicken_with_rice">
+                                    <div class="plan__content">
+                                        <p>Baked chicken</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/Chicken_breast.png" alt="Chicken_breast">
+                                    <div class="plan__content">
+                                        <p>Grilled red fish</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__day">
+                            <h2 class="content__day__title">Workout</h2>
+                            <div class="workout__plan">
+                                <div class="plan">
+                                    <img src="../img/Exercise/1s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__text">Exercise for the press</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/Exercise/2s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__content__text">Exercise for the lower back</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/Exercise/3s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__text">Fat burning exercise</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="content__day__title">Nutrition</h2>
+                            <div class="nutrition__plan">
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/lazy_oatmeal.png" alt="lazy_oatmeal">
+                                    <div class="plan__content">
+                                        <p>Vegetable Salad</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/Tuna_with_salad.png" alt="Tuna_with_salad">
+                                    <div class="plan__content">
+                                        <p>Baked chicken</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/chicken_steak.png" alt="chicken_steak">
+                                    <div class="plan__content">
+                                        <p>Grilled red fish</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__day">
+                            <h2 class="content__day__title">Workout</h2>
+                            <div class="workout__plan">
+                                <div class="plan">
+                                    <img src="../img/Exercise/4s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__text">Exercise for the press</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/Exercise/5s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__content__text">Exercise for the lower back</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/Exercise/6s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__text">Fat burning exercise</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="content__day__title">Nutrition</h2>
+                            <div class="nutrition__plan">
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/Japanese_omelet.png" alt="Japanese_omelet">
+                                    <div class="plan__content">
+                                        <p>Vegetable Salad</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/salad_with_couscous.png" alt="salad_with_couscous">
+                                    <div class="plan__content">
+                                        <p>Baked chicken</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/fish_cakes.png" alt="fish_cakes">
+                                    <div class="plan__content">
+                                        <p>Grilled red fish</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__day">
+                            <h2 class="content__day__title">Workout</h2>
+                            <div class="workout__plan">
+                                <div class="plan">
+                                    <img src="../img/Exercise/7s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__text">Exercise for the press</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/Exercise/8s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__content__text">Exercise for the lower back</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/Exercise/9s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__text">Fat burning exercise</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="content__day__title">Nutrition</h2>
+                            <div class="nutrition__plan">
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/Cheese_cakes.png" alt="Cheese_cakes">
+                                    <div class="plan__content">
+                                        <p>Vegetable Salad</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/peppers_with_chicken.png" alt="peppers_with_chicken">
+                                    <div class="plan__content">
+                                        <p>Baked chicken</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/Green_bean_salad.png" alt="Green_bean_salad">
+                                    <div class="plan__content">
+                                        <p>Grilled red fish</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="content__day">
+                            <h2 class="content__day__title">Workout</h2>
+                            <div class="workout__plan">
+                                <div class="plan">
+                                    <img src="../img/Exercise/1s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__text">Exercise for the press</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/Exercise/2s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__content__text">Exercise for the lower back</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/Exercise/3s.png" alt="Exercise">
+                                    <div class="plan__content">
+                                        <p class="plan__text">Fat burning exercise</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">Start
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="content__day__title">Nutrition</h2>
+                            <div class="nutrition__plan">
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/mini_omelets.png" alt="mini_omelets">
+                                    <div class="plan__content">
+                                        <p>Vegetable Salad</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/Chicken_rolls.png" alt="Chicken_rolls">
+                                    <div class="plan__content">
+                                        <p>Baked chicken</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="plan">
+                                    <img src="../img/menu_lose_weight/Chicken_nuggets.png" alt="Chicken_nuggets">
+                                    <div class="plan__content">
+                                        <p>Grilled red fish</p>
+                                        <a href="quiz/quiz.html" class="plan__content__button">View
+                                          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
+                                          </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                </div>
+
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__content">
+                    <p class="footer__text">Made with love / Mary Production</p>
+                    <p class="footer__text">2020</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./calculation.js"></script>
+</body>
+
+</html>
