@@ -98,27 +98,33 @@ const QUESTIONS = [{
 
 ];
 
+// Колбэк на нажатие по радио
 const radioClickCallback = (e) => {
     const answerContainerElem = document.querySelector('.test__answer_radio');
     e.preventDefault();
     localStorage.setItem(questionNumber, e.target.parentNode.querySelector('p').innerText);
     questionNumber++;
     const answerItems = answerContainerElem.querySelectorAll('.test__answer__item');
+    // Удаляем листенеры для каждого из радиобаттанов и затем удаляем сами радиобаттоны, кроме первого
     answerItems.forEach((item, index) => {
         item.removeEventListener('click', radioClickCallback);
         if (index) {
             item.remove();
         }
     })
+    // Скрыли секцию для рендера радиобаттонов
     answerContainerElem.hidden = true;
+    // Запускаем обработку следующего вопроса
     setQuestion();
 };
 
 let questionNumber = 0;
+// Вызываем обработку ПЕРВОГО вопроса, как только открыли страницу
 setQuestion();
 
 function setQuestion() {
     if (questionNumber === QUESTIONS.length) {
+        // Если вопросы закончились, то удаляем прогресс бар
         document.querySelector('.container-progress').remove();
         document.querySelector('.test__title').innerText = 'Analyzing...';
 
@@ -131,10 +137,12 @@ function setQuestion() {
         return;
     }
 
+    // Закрашиваем кружочек вопроса
     addProgress();
     if (questionNumber === 1) {
         document.querySelector('.test__text').hidden = true;
     }
+    // Получаем из массива вопроса нужный по номеру 
     let questionObject = QUESTIONS[questionNumber];
     if (!questionObject) return;
 
@@ -145,9 +153,12 @@ function setQuestion() {
             const answerContainerElem = document.querySelector('.test__answer_input')
             const answerContainer = answerContainerElem.querySelector('.test__parameters');
             answerContainerElem.hidden = false
+            // Из контейнера с вопросами взяли хтмл элемент первого вопроса
             let answerElem = answerContainer.querySelector('.test__answer__item_input');
 
             if (index) {
+                // Т.к. мы при смене вопроса оставляем хтмл элемент только для первого ответа - тут проверяем, какой номер у варианта ответа. Если второй и больше, то
+                // клонируем первый элемент и тогда уже дальше используем только что склонированный.
                 answerElem = answerElem.cloneNode(true);
                 answerContainer.appendChild(answerElem);
             }
@@ -163,21 +174,30 @@ function setQuestion() {
             const clickCallback = (e) => {
                 e.preventDefault();
                 const form = document.querySelector('.test__answer_input');
+                // Объект, в который собираем все данные из формы
                 let results = {};
+                let requireValidationError = '';
                 [...form.querySelectorAll('.test__answer__item_input')].forEach(input => {
                     const key = input.querySelector('.parameters__name').innerHTML;
                     const value = input.querySelector('.parameters__input').value;
+                    if (!value) {
+                        requireValidationError = 'All fields are required!';
+                    }
                     results[key] = value;
                 });
+                if (requireValidationError) {
+                    alert(requireValidationError);
+                    return;
+                }
                 localStorage.setItem(questionNumber, JSON.stringify(results));
                 questionNumber++;
 
+                // Затираем все варианты ответов, кроме первого. Для первого - очищаем поле.
                 const answerItems = form.querySelectorAll('.test__answer__item_input');
                 answerItems.forEach((item, index) => {
                     if (index) {
                         item.remove();
                     } else {
-
                         item.querySelector('.parameters__input').value = '';
                     }
                 })
@@ -185,6 +205,7 @@ function setQuestion() {
                 button.removeEventListener('click', clickCallback);
                 setQuestion();
             };
+            // в инпутах кнопка одна на все варианты ответов, по-этому достаточно добавить листенер только при обработке первого варианта ответов. Остальные пропускаем
             if (!index) {
                 button.addEventListener('click', clickCallback);
             }
@@ -192,8 +213,10 @@ function setQuestion() {
 
             const answerContainerElem = document.querySelector('.test__answer_radio');
             answerContainerElem.hidden = false;
+            // Получаем хтмл элемент первого варианта ответа
             let answerElem = answerContainerElem.querySelector('.test__answer__item');
 
+            // Если вариант ответа второй или более, то клонируем для него хтмл элемент из первого варианта ответа и дальше уже с ним работаем
             if (index) {
                 answerElem = answerElem.cloneNode(true);
                 answerContainerElem.appendChild(answerElem);
@@ -212,9 +235,11 @@ function setQuestion() {
         } else if (questionObject.type === "checkbox") {
             const checkBoxContainer = document.querySelector('.checkBox-container');
             checkBoxContainer.hidden = false;
+            // Получаем хтмл элемент первого варианта ответа
             const answerContainerElem = checkBoxContainer.querySelector('.test__answer_checkbox');
             let answerElem = answerContainerElem.querySelector('.test__answer__item');
 
+            // Если нужно - клонируем
             if (index) {
                 answerElem = answerElem.cloneNode(true);
                 answerContainerElem.appendChild(answerElem);
@@ -237,7 +262,9 @@ function setQuestion() {
                 let results = [];
                 const allCheckBoxes = [...checkBoxesContainer.querySelectorAll('.checkbox-input')];
                 allCheckBoxes.forEach(checkbox => checkbox.checked ? results.push(checkbox.labels[0].innerText) : undefined);
-                const validationError = results.includes('Not') && results.length > 1 ? `You can't chose "Not" option with other options` : '';
+                let validationError = '';
+                validationError = results.length === 0 ? 'Please check at least one checkbox!' : validationError;
+                validationError = results.includes('Not') && results.length > 1 ? `You can't chose "Not" option with other options` : validationError;
                 if (validationError) {
                     alert(validationError);
                     return;
@@ -255,6 +282,7 @@ function setQuestion() {
                 button.removeEventListener('click', clickCallback);
                 setQuestion();
             };
+            // Листенер на единственную кнопку добавляем только при обработке первого варианта ответов. Для всех следующих вариантов листенер уже будет установлен
             if (!index) {
                 button.addEventListener('click', clickCallback);
             }

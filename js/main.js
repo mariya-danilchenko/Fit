@@ -23,7 +23,6 @@ if (menu && menuBtn) {
 const anchors = document.querySelectorAll('a[href*="#"]');
 
 anchors.forEach(anchor => {
-    console.log(anchors);
     anchor.addEventListener('click', event => {
         event.preventDefault();
 
