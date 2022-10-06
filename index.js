@@ -1,42 +1,38 @@
-const indexPage = document.getElementById("index-page");
-//const quizPage = document.getElementById("quiz-page");
-//console.log(quizPage);
-//const calculatorPage = document.getElementById("calculator-page");
-//const menuPage = document.getElementById("menu-page");
-//const exercisePage = document.getElementById("exercise-page");
+if (window.location.hash) {
+    window.location.hash = '';
+}
 
-
-function openQuiz(e) {
-    e.preventDefault();
+function openQuiz() {
     window.location.hash = "#quiz/quiz";
 }
-indexPage.addEventListener('click', openQuiz);
 
-function openCalculation(e) {
-    e.preventDefault();
-    window.location.hash = "#calculation";
-}
-//quizPage.addEventListener('click', openCalculation);
-
-
-function openMenu(e) {
-    e.preventDefault();
-    window.location.hash = "#menu";
-}
-//calculatorPage.addEventListener('click', openMenu);
-
-function openExercise(e) {
-    e.preventDefault();
-    window.location.hash = "#exercise";
+function openCalculation() {
+    window.location.hash = '#calculation/calculation';
 }
 
+function openMenu() {
+    window.location.hash = "#calculation/menu";
+}
+
+function openExercise() {
+    window.location.hash = "#calculation/exercise";
+}
 
 function onLoad(data) {
     document.body.innerHTML = data;
-    const script = document.createElement('script');
-    script.setAttribute('type', 'text/javascript');
-    script.setAttribute('src', 'quiz/quiz.js');
-    body.appendChild(script);
+    const hash = window.location.hash.substring(1);
+    let jsPath = '';
+    if (hash === 'quiz/quiz') {
+        jsPath = 'quiz/quiz.js';
+    } else if (hash === 'calculation/calculation') {
+        jsPath = 'calculation/calculation.js';
+    }
+    if (jsPath) {
+        const script = document.createElement('script');
+        script.setAttribute('type', 'text/javascript');
+        script.setAttribute('src', jsPath);
+        body.appendChild(script);
+    }
 }
 
 function onError(err) {
@@ -44,7 +40,6 @@ function onError(err) {
 }
 
 window.onhashchange = function(e) {
-    console.log("onhashchange");
     const hash = window.location.hash.substring(1);
     $.ajax(`${hash}.html`, {
         data: "GET",

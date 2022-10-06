@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Prompt:300,regular,500,600,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="calculation.css">
-    <link rel="stylesheet" href="calculation_adaptive.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="calculation/calculation.css">
+    <link rel="stylesheet" href="calculation/calculation_adaptive.css">
+    <title>Calculator</title>
 </head>
 
-<body id="calculator-page">
+<body>
     <div class="wrapper">
         <header class="header">
             <div class="header__container">
@@ -96,7 +96,7 @@
                                     <img src="../img/Exercise/4s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__text">Skater</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -108,7 +108,7 @@
                                     <img src="../img/Exercise/2s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__content__text">High hip run</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -120,7 +120,7 @@
                                     <img src="../img/Exercise/3s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__text">Squats</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -135,7 +135,7 @@
                                     <img src="../img/menu_lose_weight/apple_pancakes.png" alt="apple_pancakes">
                                     <div class="plan__content">
                                         <p>Apple fritters</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -147,7 +147,7 @@
                                     <img src="../img/menu_lose_weight/Pumpkin_soup.png" alt="Pumpkin_soup">
                                     <div class="plan__content">
                                         <p>Pumpkin soup</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -159,7 +159,7 @@
                                     <img src="../img/menu_lose_weight/Stuffed_champignons.png" alt="Stuffed_champignons">
                                     <div class="plan__content">
                                         <p>Stuffed champignons</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -176,7 +176,7 @@
                                     <img src="../img/Exercise/4s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__text">Skater</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -188,7 +188,7 @@
                                     <img src="../img/Exercise/5s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__content__text">Jump Squats</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -200,7 +200,7 @@
                                     <img src="../img/Exercise/6s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__text">Wide squat</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -215,7 +215,7 @@
                                     <img src="../img/menu_lose_weight/eggs_with_salad.png" alt="eggs_with_salad">
                                     <div class="plan__content">
                                         <p>Eggs with salad</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -227,7 +227,7 @@
                                     <img src="../img/menu_lose_weight/Pasta_with_tuna.png" alt="Pasta_with_tuna">
                                     <div class="plan__content">
                                         <p>Pasta with tuna</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -239,7 +239,7 @@
                                     <img src="../img/menu_lose_weight/Pizza.png" alt="Pizza">
                                     <div class="plan__content">
                                         <p>Pizza</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -255,7 +255,7 @@
                                     <img src="../img/Exercise/7s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__text">Side lunges</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -267,7 +267,7 @@
                                     <img src="../img/Exercise/8s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__content__text">Вurpee</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -279,7 +279,7 @@
                                     <img src="../img/Exercise/9s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__text">Swing leg to the side</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -294,7 +294,7 @@
                                     <img src="../img/menu_lose_weight/lazy_dumplings.png" alt="lazy_dumplings">
                                     <div class="plan__content">
                                         <p>Lazy dumplings</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -306,7 +306,7 @@
                                     <img src="../img/menu_lose_weight/Chicken_with_rice.png" alt="Chicken_with_rice">
                                     <div class="plan__content">
                                         <p>Chicken with rice</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -318,7 +318,7 @@
                                     <img src="../img/menu_lose_weight/Chicken_breast.png" alt="Chicken_breast">
                                     <div class="plan__content">
                                         <p>Chicken breast</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -334,7 +334,7 @@
                                     <img src="../img/Exercise/1s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__text">Cross twist</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -346,7 +346,7 @@
                                     <img src="../img/Exercise/2s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__content__text">High hip run</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -358,7 +358,7 @@
                                     <img src="../img/Exercise/3s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__text">Squats</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -373,7 +373,7 @@
                                     <img src="../img/menu_lose_weight/lazy_oatmeal.png" alt="lazy_oatmeal">
                                     <div class="plan__content">
                                         <p>Lazy oatmeal</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -385,7 +385,7 @@
                                     <img src="../img/menu_lose_weight/Tuna_with_salad.png" alt="Tuna_with_salad">
                                     <div class="plan__content">
                                         <p>Tuna with salad</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -397,7 +397,7 @@
                                     <img src="../img/menu_lose_weight/chicken_steak.png" alt="chicken_steak">
                                     <div class="plan__content">
                                         <p>Chicken steak</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -413,7 +413,7 @@
                                     <img src="../img/Exercise/4s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__text">Skater</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -425,7 +425,7 @@
                                     <img src="../img/Exercise/5s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__content__text">Jump Squats</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -437,7 +437,7 @@
                                     <img src="../img/Exercise/6s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__text">Wide squat</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -452,7 +452,7 @@
                                     <img src="../img/menu_lose_weight/Japanese_omelet.png" alt="Japanese_omelet">
                                     <div class="plan__content">
                                         <p>Japanese omelet</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -464,7 +464,7 @@
                                     <img src="../img/menu_lose_weight/salad_with_couscous.png" alt="salad_with_couscous">
                                     <div class="plan__content">
                                         <p>Salad with couscous</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -476,7 +476,7 @@
                                     <img src="../img/menu_lose_weight/fish_cakes.png" alt="fish_cakes">
                                     <div class="plan__content">
                                         <p>Fish cakes</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -492,7 +492,7 @@
                                     <img src="../img/Exercise/7s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__text">Side lunges</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -504,7 +504,7 @@
                                     <img src="../img/Exercise/8s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__content__text">Вurpee</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -516,7 +516,7 @@
                                     <img src="../img/Exercise/9s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__text">Swing leg to the side</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -531,7 +531,7 @@
                                     <img src="../img/menu_lose_weight/Cheese_cakes.png" alt="Cheese_cakes">
                                     <div class="plan__content">
                                         <p>Cheese cakes</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -543,7 +543,7 @@
                                     <img src="../img/menu_lose_weight/peppers_with_chicken.png" alt="peppers_with_chicken">
                                     <div class="plan__content">
                                         <p>Peppers with chicken</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -555,7 +555,7 @@
                                     <img src="../img/menu_lose_weight/Green_bean_salad.png" alt="Green_bean_salad">
                                     <div class="plan__content">
                                         <p>Green bean salad</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -573,7 +573,7 @@
                                     <img src="../img/Exercise/1s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__text">Cross twist</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -585,7 +585,7 @@
                                     <img src="../img/Exercise/2s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__content__text">High hip run</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -597,7 +597,7 @@
                                     <img src="../img/Exercise/3s.png" alt="Exercise">
                                     <div class="plan__content">
                                         <p class="plan__text">Squats</p>
-                                        <a href="exercise.html" class="plan__content__button">Start
+                                        <a href="javascript:openExercise()" class="plan__content__button">Start
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -612,7 +612,7 @@
                                     <img src="../img/menu_lose_weight/mini_omelets.png" alt="mini_omelets">
                                     <div class="plan__content">
                                         <p>Mini omelets</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -624,7 +624,7 @@
                                     <img src="../img/menu_lose_weight/Chicken_rolls.png" alt="Chicken_rolls">
                                     <div class="plan__content">
                                         <p>Chicken rolls</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -636,7 +636,7 @@
                                     <img src="../img/menu_lose_weight/Chicken_nuggets.png" alt="Chicken_nuggets">
                                     <div class="plan__content">
                                         <p>Chicken nuggets</p>
-                                        <a href="menu.html" class="plan__content__button">View
+                                        <a href="javascript:openMenu()" class="plan__content__button">View
                                           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="#27AE60"/>
                                           </svg>
@@ -662,8 +662,6 @@
             </div>
         </footer>
     </div>
-    <script src="calculation.js"></script>
-    <script src="index.js"></script>
 </body>
 
 </html>
